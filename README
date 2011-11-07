@@ -21,7 +21,7 @@ realip.realip_header="HTTP_X_FORWARDED_FOR"
 FUNCTION
 mix realip(void)
 This function returns IP address of true client. Return FALSE
-when realip is disalbed. Return NULL is there is no remote address.
+when realip is disalbed. Return NULL if there is no remote address.
 i.e. CLI
 
 
