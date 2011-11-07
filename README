@@ -1,0 +1,26 @@
+RealIP module is made for PHP servers behind reverse proxy.
+
+    ***** SECURITY WARNING *****
+    NEVER ENABLE THIS MODULE WITHOUT REVERSE PROXY.
+    OTHERWISE YOU MAY HAVE SECURITY PROBLEM.
+
+
+This module sets $_SERVER['REMOTE_ADDR'] according to 
+"realip.realip_header" php.ini. 
+
+php.ini EXAMPLES 
+;X-Real-IP is the real client IP. (default)
+realip.realip_header="HTTP_X_REAL_IP"
+
+;X-Forwarded-For is the real client IP.
+realip.realip_header="HTTP_X_FORWARDED_FOR"
+
+FUNCTION
+mix realip(void)
+This function returns IP address of true client. Return FALSE
+when realip is disalbed. Return NULL is there is no remote address.
+i.e. CLI
+
+
+Auther: Yasuo Ohgaki <yohgaki@ohgaki.net> / <yohgaki@php.net>
+
