@@ -6,13 +6,16 @@ RealIP module is made for PHP servers behind reverse proxy.
 
 
 This module sets $_SERVER['REMOTE_ADDR'] according to 
-"realip.realip_header" php.ini. 
+"realip.realip_header" php.ini. This module is disabled
+by default for security reason.
 
 php.ini EXAMPLES 
 ;X-Real-IP is the real client IP. (default)
+realip.enable=1
 realip.realip_header="HTTP_X_REAL_IP"
 
 ;X-Forwarded-For is the real client IP.
+realip.enable=1
 realip.realip_header="HTTP_X_FORWARDED_FOR"
 
 FUNCTION
