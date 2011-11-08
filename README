@@ -9,7 +9,16 @@ This module sets $_SERVER['REMOTE_ADDR'] according to
 "realip.realip_header" php.ini. This module is disabled
 by default for security reason.
 
-php.ini EXAMPLES 
+=== How to install ===
+1. Clone or download files.
+2. run "phpize" command in the realip module directory.
+   (phpize command is blong to php-devel package for most Linux)
+3. run "./configure --with-realip"
+4. run "make && make install"
+5. copy realip.ini to ini scan directory. e.g /etc/php.d/
+6. edit realip.ini, then restart your web server.
+
+=== php.ini EXAMPLES ===
 ;X-Real-IP is the real client IP. (default)
 realip.enable=1
 realip.realip_header="HTTP_X_REAL_IP"
@@ -18,7 +27,7 @@ realip.realip_header="HTTP_X_REAL_IP"
 realip.enable=1
 realip.realip_header="HTTP_X_FORWARDED_FOR"
 
-FUNCTION
+=== FUNCTION ===
 mix realip(void)
 This function returns IP address of true client. Return FALSE
 when realip is disalbed. Return NULL if there is no remote address.
